@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { VisualFlow } from '.'
 
-describe('ExampleComponent', () => {
+describe('VisualFlow', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(VisualFlow).toBeTruthy()
   })
 })
