@@ -1,6 +1,6 @@
 # visual-flow
 
-> Node based visual scripting.
+> Nodes based visual scripting.
 
 [![NPM](https://img.shields.io/npm/v/visual-flow.svg)](https://www.npmjs.com/package/visual-flow) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
