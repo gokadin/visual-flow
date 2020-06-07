@@ -9,8 +9,8 @@ export const DROP_NODE = 'DROP_NODE'
 interface DropNode {
   type: typeof DROP_NODE
   payload: {
-    nodeIndex: number
-    clientOffset: XYCoord | null
+    nodeId: string
+    clientOffsetDiff: XYCoord | null
   }
 }
 
@@ -21,8 +21,8 @@ export const initialize = (): SystemActionsTypes => {
 }
 
 export const dropNode = (
-  nodeIndex: number,
-  clientOffset: XYCoord | null
+  nodeId: string,
+  clientOffsetDiff: XYCoord | null
 ): SystemActionsTypes => {
-  return { type: DROP_NODE, payload: { nodeIndex, clientOffset } }
+  return { type: DROP_NODE, payload: { nodeId, clientOffsetDiff } }
 }

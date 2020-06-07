@@ -16,7 +16,7 @@ export const System = () => {
   const [, drop] = useDrop({
     accept: 'node',
     drop: (item: any, monitor) =>
-      dispatch(dropNode(item.index, monitor.getDifferenceFromInitialOffset()))
+      dispatch(dropNode(item.nodeId, monitor.getDifferenceFromInitialOffset()))
   })
 
   return (

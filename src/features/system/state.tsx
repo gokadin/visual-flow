@@ -22,6 +22,20 @@ const initialState: SystemState = {
       name: 'visual',
       posX: 100,
       posY: 100,
+      connections: ['3']
+    },
+    {
+      id: '2',
+      name: 'auditory',
+      posX: 130,
+      posY: 300,
+      connections: ['3']
+    },
+    {
+      id: '3',
+      name: 'sensory',
+      posX: 400,
+      posY: 200,
       connections: []
     }
   ]

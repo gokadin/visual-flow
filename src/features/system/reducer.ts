@@ -28,16 +28,19 @@ export const SystemReducer = (
       return {
         ...state,
         nodes: state.nodes.map((node) => {
+          if (node.id !== action.payload.nodeId) {
+            return node
+          }
           return {
             ...node,
             posX:
-              action.payload.clientOffset == null
+              action.payload.clientOffsetDiff == null
                 ? node.posX
-                : (node.posX || DEFAULT_X) + action.payload.clientOffset.x,
+                : (node.posX || DEFAULT_X) + action.payload.clientOffsetDiff.x,
             posY:
-              action.payload.clientOffset == null
+              action.payload.clientOffsetDiff == null
                 ? node.posY
-                : (node.posY || DEFAULT_Y) + action.payload.clientOffset.y
+                : (node.posY || DEFAULT_Y) + action.payload.clientOffsetDiff.y
           }
         })
       }

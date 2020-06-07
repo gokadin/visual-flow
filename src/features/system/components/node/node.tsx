@@ -14,7 +14,7 @@ export const NodeView = ({ nodeIndex }: NodeViewProps) => {
   const node = state.nodes[nodeIndex]
 
   const [{ isDragging }, dragRef] = useDrag({
-    item: { type: 'node', index: nodeIndex },
+    item: { type: 'node', nodeId: node.id },
     collect: (monitor) => ({
       isDragging: monitor.isDragging()
     })
