@@ -1,8 +1,10 @@
 import { XYCoord } from 'react-dnd'
+import { VisualFlowData } from './types'
 
 export const INITIALIZE = 'INITIALIZE'
 interface Initialize {
-  type: typeof INITIALIZE
+  type: typeof INITIALIZE,
+  payload: VisualFlowData
 }
 
 export const DROP_NODE = 'DROP_NODE'
@@ -16,8 +18,8 @@ interface DropNode {
 
 export type SystemActionsTypes = Initialize | DropNode
 
-export const initialize = (): SystemActionsTypes => {
-  return { type: INITIALIZE }
+export const initialize = (data: VisualFlowData): SystemActionsTypes => {
+  return { type: INITIALIZE, payload: data }
 }
 
 export const dropNode = (

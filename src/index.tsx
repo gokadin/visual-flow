@@ -4,13 +4,18 @@ import { SystemProvider } from './features/system/state'
 import { System } from './features/system/components/system/system'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import { VisualFlowData } from './features/system/types'
 
-export const VisualFlow = () => {
+type IndexProps = {
+  data: VisualFlowData
+}
+
+export const VisualFlow = ({ data }: IndexProps) => {
   return (
     <div className={styles.visualFlow}>
       <SystemProvider>
         <DndProvider backend={HTML5Backend}>
-          <System />
+          <System data={data} />
         </DndProvider>
       </SystemProvider>
     </div>

@@ -3,42 +3,27 @@ import { SystemReducer } from './reducer'
 
 export interface SystemState {
   nodes: Node[]
+  connections: Connection[]
+}
+
+export interface Connection {
+  from: string
+  to: string
 }
 
 export interface Node {
   id: string
   name: string
   connections: string[]
-  posX?: number
-  posY?: number
-  width?: number
-  height?: number
+  posX: number
+  posY: number
+  width: number
+  height: number
 }
 
 const initialState: SystemState = {
-  nodes: [
-    {
-      id: '1',
-      name: 'visual',
-      posX: 100,
-      posY: 100,
-      connections: ['3']
-    },
-    {
-      id: '2',
-      name: 'auditory',
-      posX: 130,
-      posY: 300,
-      connections: ['3']
-    },
-    {
-      id: '3',
-      name: 'sensory',
-      posX: 400,
-      posY: 200,
-      connections: []
-    }
-  ]
+  nodes: [],
+  connections: []
 }
 
 export const SystemContext = createContext<{

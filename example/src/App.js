@@ -6,20 +6,21 @@ import 'visual-flow/dist/index.css'
 const data = {
   nodes: [
     {
-      id: '1',
-      connections: ['2', '3'],
-      posX: 0,
-      posY: 0
+      name: 'visual',
+      posX: 100,
+      posY: 100,
+      connections: ['3'],
     },
     {
-      id: '2',
-      posX: 100,
-      posY: 100
+      name: 'auditory',
+      posX: 120,
+      posY: 300,
+      connections: ['3']
     },
     {
-      id: '3',
-      posX: 100,
-      posY: 200
+      name: 'sensory',
+      posX: 420,
+      posY: 200,
     }
   ]
 }
