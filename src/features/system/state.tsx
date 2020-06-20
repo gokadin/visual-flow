@@ -9,6 +9,7 @@ export interface SystemState {
 export interface Connection {
   from: string
   to: string
+  d?: string
 }
 
 export interface Node {
@@ -19,6 +20,10 @@ export interface Node {
   posY: number
   width: number
   height: number
+  inCx: number
+  inCy: number
+  outCx: number
+  outCy: number
 }
 
 const initialState: SystemState = {

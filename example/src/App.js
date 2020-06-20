@@ -9,18 +9,18 @@ const data = {
       name: 'visual',
       posX: 100,
       posY: 100,
-      connections: ['3'],
+      connections: ['2']
     },
     {
       name: 'auditory',
       posX: 120,
       posY: 300,
-      connections: ['3']
+      connections: ['2']
     },
     {
       name: 'sensory',
       posX: 420,
-      posY: 200,
+      posY: 200
     }
   ]
 }

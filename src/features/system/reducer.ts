@@ -4,6 +4,10 @@ import { VisualFlowData } from './types'
 
 const DEFAULT_WIDTH = 160
 const DEFAULT_HEIGHT = 60
+const CONN_IN_OFFSET_X = 5
+const CONN_IN_OFFSET_Y = 10
+const CONN_OUT_OFFSET_X = -5
+const CONN_OUT_OFFSET_Y = 10
 
 export const SystemReducer = (
   state: SystemState,
@@ -56,7 +60,11 @@ const initialize = (data: VisualFlowData): SystemState => {
         height: node.height || DEFAULT_HEIGHT,
         posX: node.posX,
         posY: node.posY,
-        connections: nodeConnections
+        connections: nodeConnections,
+        inCx: node.posX + CONN_IN_OFFSET_X,
+        inCy: node.posY + ((node.height || DEFAULT_HEIGHT) / 2) + CONN_IN_OFFSET_Y,
+        outCx: node.posX + (node.width || DEFAULT_WIDTH) + CONN_OUT_OFFSET_X,
+        outCy: node.posY + ((node.height || DEFAULT_HEIGHT) / 2) + CONN_OUT_OFFSET_Y
       }
     }),
     connections: connections
